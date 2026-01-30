@@ -1,11 +1,23 @@
 # NOSTRAXITEN DOMINION v2.2
+Framework profesional de auditoria y recoleccion de inteligencia (OSINT).
 
-Framework profesional de auditoría y recolección de inteligencia (OSINT) diseñado para entornos de terminal móvil.
+## Compatibilidad
+* **Kali Linux** (Recomendado)
+* **Termux** (Android)
+* **Debian/Ubuntu**
 
-## Protocolo de Instalación
+## Protocolo de Instalacion
 
-Para un despliegue correcto de la suite, ejecute la siguiente secuencia de comandos en su terminal:
+### En Kali Linux / Sistemas Debian:
+```bash
+sudo apt update && sudo apt install git python3 php curl -y
+git clone https://github.com/Nostraxiten/noxtools.git
+cd noxtools
+chmod +x *
+sudo bash noxtool.sh
+```
 
+### En Termux:
 ```bash
 pkg install git python php curl -y
 git clone https://github.com/Nostraxiten/noxtools.git
@@ -14,17 +26,17 @@ chmod +x *
 bash noxtool.sh
 ```
 
-## Módulos de Operación
-* **Cat's Eye**: Auditoría de perfiles en redes sociales.
-* **Adox**: Sistema de recolección de información (Doxxing).
-* **NoxCheck**: Verificador de estados de protocolos de comunicación.
-* **NoxPhone**: Generador y validador de numeración internacional.
-* **AutoPC**: Auditoría de sistemas de escritorio.
-* **Nopsi**: Geolocalización y rastreo de direcciones IP.
-* **Nox MX**: Análisis de servidores de correo electrónico.
-* **NoxSee**: Extracción de metadatos de mensajería.
-* **NoxMP**: Captura de parámetros de red.
-* **NoxWS**: Análisis de tráfico de enlaces.
-* **NoxIF**: Interfaz de monitorización de red.
+## Modulos Operativos
+* **Cat's Eye**: Auditoria de perfiles en redes sociales (OSINT).
+* **Adox**: Sistema de recoleccion de informacion y reportes.
+* **NoxCheck**: Analizador de disponibilidad de protocolos.
+* **NoxPhone**: Validacion de numeracion internacional.
+* **AutoPC**: Auditoria de sistemas de escritorio.
+* **Nopsi**: Geolocalizacion y rastreo de direcciones IP.
+* **Nox MX**: Analisis de servidores de correo.
+* **NoxSee**: Extraccion de metadatos.
+* **NoxMP**: Captura de parametros de red.
+* **NoxWS**: Analisis de trafico de URLs.
+* **NoxIF**: Interfaz de monitorizacion avanzada.
 
 Desarrollado por Nostraxiten.
