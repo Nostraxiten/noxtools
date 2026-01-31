@@ -1,5 +1,5 @@
-# NOSTRAXITEN DOMINION v2.2
-Framework profesional de auditoria y recoleccion de inteligencia (OSINT).
+# NOSTRAXITEN DOMINION v2.4
+Bugfix: ADox solucionado para que la información que da no sea incorrecta.
 
 ## Compatibilidad
 * **Kali Linux** (Recomendado)
