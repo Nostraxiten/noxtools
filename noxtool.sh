@@ -61,7 +61,7 @@ case $opt in
     5) run_t "autopc.sh" ;;
     6) run_t "NOPSI.sh" ;;
     7) run_t "nomx.sh" ;;
-    8) run_t "noxsee.sh" ;;
+    8) run_t "noxsee.py" ;;
     9) run_t "noxmp.sh" ;;
     10) run_t "noxws.sh" ;;
     11) run_t "noxif.sh" ;;
