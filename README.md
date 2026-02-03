@@ -1,5 +1,5 @@
-# NOSTRAXITEN DOMINION v2.6
-Bugfix: Mejora en el sistema de búsquedas de NOPSI, y mejoras en Noxsee 
+# NOSTRAXITEN DOMINION v2.7
+Bugfix: Bugfix de NOPSI, funcionamiento válido en kali Linux.
 ## Compatibilidad
 * **Kali Linux** (Recomendado)
 * **Termux** (Android)
