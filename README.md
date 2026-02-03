@@ -8,6 +8,12 @@ Bugfix: Bugfix de NOPSI, funcionamiento válido en kali Linux.
 ## Protocolo de Instalacion
 
 ### En Kali Linux / Sistemas Debian:
+
+antes:
+
+sudo apt update && sudo apt install -y whois nmap dnsrecon curl jq dnsutils bsdmainutils
+
+
 ```bash
 sudo apt update && sudo apt install git python3 php curl -y
 git clone https://github.com/Nostraxiten/noxtools.git
