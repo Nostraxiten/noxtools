@@ -1,69 +1,81 @@
 #!/bin/bash
-# ==========================================
-# NOXTOOLS v2.2 - NOSTRAXITEN DOMINION
-# ==========================================
 
-# Definición de colores
-ROJO='\033[0;31m'
-VERDE='\033[0;32m'
-AZUL='\033[0;34m'
-MAGENTA='\033[0;35m'
-CYAN='\033[0;36m'
-AMARILLO='\033[1;33m'
-RESET='\033[0m'
+# --- Paleta de Colores ---
+P='\e[1;35m'  # Púrpura/Rosa (Banner y detalles)
+G='\e[1;32m'  # Verde (Encabezados)
+Y='\e[1;33m'  # Amarillo (Estado/Advertencia)
+C='\e[1;36m'  # Cyan (Separadores y Prompt)
+W='\e[1;37m'  # Blanco (Opciones)
+R='\e[0m'     # Reset
 
-# Función de Logo con el nuevo nombre NOSTRAX
-function banner() {
-    clear
-    echo -e "${MAGENTA}"
-    echo "  ███╗   ██╗ ██████╗ ███████╗████████╗██████╗  █████╗ ██╗  ██╗"
-    echo "  ████╗  ██║██╔═══██╗██╔════╝╚══██╔══╝██╔══██╗██╔══██╗╚██╗██╔╝"
-    echo "  ██╔██╗ ██║██║   ██║███████╗   ██║   ██████╔╝███████║ ╚███╔╝ "
-    echo "  ██║╚██╗██║██║   ██║╚════██║   ██║   ██╔══██╗██╔══██║ ██╔██╗ "
-    echo "  ██║ ╚████║╚██████╔╝███████║   ██║   ██║  ██║██║  ██║██╔╝ ██╗"
-    echo "  ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝"
-    echo -e "               [ NOSTRAX - NOXTOOLS v3.2 ]${RESET}"
-    echo -e "${CYAN}------------------------------------------------------------${RESET}"
-    echo -e "${AMARILLO}  >> NOSTRAXITEN DOMINION | ANDROID: 15# | ROOT ACCESS <<${RESET}"
-    echo -e "${CYAN}------------------------------------------------------------${RESET}"
+# --- Función de Ejecución ---
+run_tool() {
+    local file=$1
+    if [ -f "$file" ]; then
+        echo -e "${G}[+] Iniciando: $file...${R}"
+        chmod +x "$file"
+        if [[ "$file" == *.py ]]; then
+            python3 "$file"
+        else
+            bash "$file"
+        fi
+    else
+        echo -e "${P}[!] Error: No se encuentra $file${R}"
+    fi
+    echo -e "\n${Y}Presiona ENTER para volver...${R}"
+    read
 }
 
-# Menú principal
-function menu() {
-    banner
-    echo -e "${VERDE}# Herramientas de Reconocimiento y Ataque:${RESET}"
-    echo -e "  [1] Sherlock OSINT       (catsaye.sh)"
-    echo -e "  [2] A.D.OX."
-    echo -e "  [3] Auto_Phone Móvil"
-    echo -e "  [4] adox.b.sh"
-    echo -e "  [5] ${AMARILLO}Zero IP Scanner      (Whois + Geo)${RESET}"
-    echo -e "  [6] Rastr. de Callers WA (nero.sh)"
-    echo -e "  [7] Gen. Números Priv.   (nophs.sh)"
-    echo -e "  [8] noxsee.sh"
-    echo -e "  [9] noxwifi.sh"
-    echo -e "  [10] Escaneo de Puertos Nmap"
-    echo -e "  [11] Metasploit (msfconsole)"
-    echo -e "  [0] SALIR"
-    echo -e ""
-    echo -ne "${CYAN}NOSTRAXITEN-Root# ${RESET}"
+# --- Interfaz Visual ---
+while true; do
+    clear
+    echo -e "${P}"
+    echo "  _   _  ___  ____ _____ ____      _    __  __ "
+    echo " | \ | |/ _ \/ ___|_   _|  _ \    / \   \ \/ / "
+    echo " |  \| | | | \___ \ | | | |_) |  / _ \   \  /  "
+    echo " | |\  | |_| |___) || | |  _ <  / ___ \  /  \  "
+    echo " |_| \_|\___/|____/ |_| |_| \_\/_/   \_\/_/\_\ "
+    echo "                                               "
+    echo -e "         [ NOSTRAX - NOXTOOLS v3.2 ]         "
+    echo -e "${C}----------------------------------------------------${R}"
+    echo -e "${Y} >> NOSTRAXITEN DOMINION | ANDROID: 15# | ROOT ACCESS <<${R}"
+    echo -e "${C}----------------------------------------------------${R}"
+
+    echo -e "${G}# Herramientas Disponibles (.sh y .py):${R}"
+    
+    echo -e "${W}[1] A.D.OX Tool         ${P}(ADox.sh)${R}"
+    echo -e "${W}[2] Nox Integrity Check ${P}(NoxCheck.sh)${R}"
+    echo -e "${W}[3] Auto PC Connector   ${P}(autopc.sh)${R}"
+    echo -e "${W}[4] Gen. Números Priv.  ${P}(nomx.sh)${R}"
+    echo -e "${W}[5] Nox Multi-Port      ${P}(noxmp.sh)${R}"
+    echo -e "${W}[6] Nox Wifi Auditor    ${P}(noxws.sh)${R}"
+    echo -e "${W}[7] NOPSI Scanner       ${P}(NOPSI.sh)${R}"
+    echo -e "${W}[8] Auto_Phone Móvil    ${P}(Noxphone.sh)${R}"
+    echo -e "${W}[9] Sherlock OSINT      ${P}(catseye.sh)${R}"
+    echo -e "${W}[10] Network Interfaces ${P}(noxif.sh)${R}"
+    echo -e "${W}[11] NoxSee Python      ${P}(noxsee.py)${R}"
+    echo -e "${W}[12] Zero IP Scanner    ${P}(zero.sh)${R}"
+
+    echo -e "\n${P}[0] SALIR${R}"
+    
+    echo -n -e "\n${C}NOSTRAXITEN-Root# ${R}"
     read opcion
 
     case $opcion in
-        1) echo "Lanzando Sherlock..."; sleep 2; menu ;;
-        2) echo "Lanzando A.D.OX..."; sleep 2; menu ;;
-        3) echo "Lanzando Auto_Phone..."; sleep 2; menu ;;
-        4) echo "Lanzando adox.b..."; sleep 2; menu ;;
-        5) ./zero.sh ;; # Llama al archivo que tienes en la carpeta
-        6) echo "Lanzando Nero..."; sleep 2; menu ;;
-        7) echo "Lanzando nophs..."; sleep 2; menu ;;
-        8) echo "Lanzando noxsee..."; sleep 2; menu ;;
-        9) echo "Lanzando noxwifi..."; sleep 2; menu ;;
-        10) echo "Iniciando Nmap..."; sleep 2; menu ;;
-        11) msfconsole ;;
-        0) clear; exit ;;
-        *) echo -e "${ROJO}[!] Opción no válida${RESET}"; sleep 1; menu ;;
+        1) run_tool "ADox.sh" ;;
+        2) run_tool "NoxCheck.sh" ;;
+        3) run_tool "autopc.sh" ;;
+        4) run_tool "nomx.sh" ;;
+        5) run_tool "noxmp.sh" ;;
+        6) run_tool "noxws.sh" ;;
+        7) run_tool "NOPSI.sh" ;;
+        8) run_tool "Noxphone.sh" ;;
+        9) run_tool "catseye.sh" ;;
+        10) run_tool "noxif.sh" ;;
+        11) run_tool "noxsee.py" ;;
+        12) run_tool "zero.sh" ;;
+        0) exit 0 ;;
+        *) echo -e "${P}[!] Opción no válida${R}"; sleep 1 ;;
     esac
-}
-
-menu
+done
 

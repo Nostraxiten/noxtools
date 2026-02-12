@@ -1,41 +1,58 @@
-# NOSTRAXITEN DOMINION v2.6
-Bugfix: Mejora en el sistema de búsquedas de NOPSI, y mejoras en Noxsee 
-## Compatibilidad
-* **Kali Linux** (Recomendado)
-* **Termux** (Android)
-* **Debian/Ubuntu**
+# 💜 NOXTOOLS v3.2 - NOSTRAXITEN DOMINION
 
-## Protocolo de Instalacion
+![Version](https://img.shields.io/badge/Version-3.2-purple.svg)
+![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-black.svg)
+![User](https://img.shields.io/badge/Developer-Nostraxiten-pink.svg)
 
-### En Kali Linux / Sistemas Debian:
+> **NOXTOOLS** es una suite de scripts automatizados diseñada para auditoría, reconocimiento OSINT y gestión de dispositivos móviles directamente desde la terminal de Nostraxiten.
+
+---
+
+## 🚀 Instalación y Uso
+
+Para desplegar el menú principal en tu entorno:
+
 ```bash
-sudo apt update && sudo apt install git python3 php curl -y
-git clone https://github.com/Nostraxiten/noxtools.git
-cd noxtools
-chmod +x *
-sudo bash noxtool.sh
-```
-
-### En Termux:
-```bash
-pkg install git python php curl -y
-git clone https://github.com/Nostraxiten/noxtools.git
+git clone https://github.com/Nostraxiten/noxtools
 cd noxtools
 chmod +x *
 bash noxtool.sh
 ```
 
-## Modulos Operativos
-* **Cat's Eye**: Auditoria de perfiles en redes sociales (OSINT).
-* **Adox**: Sistema de recoleccion de informacion y reportes.
-* **NoxCheck**: Analizador de disponibilidad de protocolos.
-* **NoxPhone**: Validacion de numeracion internacional.
-* **AutoPC**: Auditoria de sistemas de escritorio.
-* **Nopsi**: Geolocalizacion y rastreo de direcciones IP.
-* **Nox MX**: Analisis de servidores de correo.
-* **NoxSee**: Extraccion de metadatos.
-* **NoxMP**: Captura de parametros de red.
-* **NoxWS**: Analisis de trafico de URLs.
-* **NoxIF**: Interfaz de monitorizacion avanzada.
+---
 
-Desarrollado por Nostraxiten.
+## 🛠️ Herramientas Incluidas (Scripts Actuales)
+
+La suite se compone de los siguientes archivos verificados en el repositorio:
+
+| Herramienta | Archivo | Tipo |
+| :--- | :--- | :--- |
+| **Sherlock OSINT** | catseye.sh | Bash |
+| **Zero IP Scanner** | zero.sh | Bash |
+| **NoxSee Search** | noxsee.sh | Bash |
+| **NoxSee Engine** | noxsee.py | Python |
+| **Nox Multi-Port** | noxmp.sh | Bash |
+| **Nox Wifi Auditor** | noxws.sh | Bash |
+| **Network Interfaces**| noxif.sh | Bash |
+| **NOPSI Scanner** | NOPSI.sh | Bash |
+| **Auto_Phone Móvil** | Noxphone.sh | Bash |
+| **Gen. Números Priv.**| nomx.sh | Bash |
+| **Auto PC Connector** | autopc.sh | Bash |
+| **A.D.OX Tool** | ADox.sh | Bash |
+| **Integrity Check** | NoxCheck.sh | Bash |
+
+---
+
+## 🎨 Interfaz Visual
+La herramienta presenta un diseño **Cyberpunk** con tonos:
+* **Morado/Púrpura:** Para el branding principal y archivos.
+* **Cyan:** Para los separadores y el prompt de Root.
+* **Verde:** Para las categorías y éxito de ejecución.
+
+---
+
+## ⚠️ Aviso Legal
+Este kit de herramientas ha sido desarrollado por **Nostraxiten** para fines educativos y de auditoría ética. El uso de estos scripts contra objetivos sin autorización previa es responsabilidad exclusiva del usuario final.
+
+---
+**Dominio:** Nostraxiten Dominion | **Android:** 15# Root Access
